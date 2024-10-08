@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 1s;
+      /* Transisi untuk perubahan warna latar belakang */
+    }
+
+    .bg-change {
+      background-color: #F9C2CD;
+      /* Warna latar belakang baru */
+    }
+
+    h1 {
+      font-family: "Montserrat Medium";
+      max-width: 40ch;
+      text-align: center;
+      transform: scale(0.94);
+      animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    }
+
+    @keyframes scale {
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    span {
+      display: inline-block;
+      opacity: 0;
+      filter: blur(4px);
+    }
+
+    /* Animasi untuk masing-masing span */
+    span:nth-child(1) {
+      animation: fade-in 1s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(2) {
+      animation: fade-in 1s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(3) {
+      animation: fade-in 1s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(4) {
+      animation: fade-in 1s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(5) {
+      animation: fade-in 1s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(6) {
+      animation: fade-in 1s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(7) {
+      animation: fade-in 1s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(8) {
+      animation: fade-in 1s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(9) {
+      animation: fade-in 1s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(10) {
+      animation: fade-in 1s 2.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(11) {
+      animation: fade-in 1s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(12) {
+      animation: fade-in 1s 2.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(13) {
+      animation: fade-in 1s 2.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(14) {
+      animation: fade-in 1s 2.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(15) {
+      animation: fade-in 1s 2.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(16) {
+      animation: fade-in 1s 2.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(17) {
+      animation: fade-in 1s 2.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    span:nth-child(18) {
+      animation: fade-in 1s 3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+
+    @keyframes fade-in {
+      100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+
+    .fade-in-body {
+      opacity: 0;
+      animation: fadeIn 4s forwards;
+    }
+
+    .fade-out {
+      opacity: 1;
+      animation: fadeOut 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      to {
+        background-color: white;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="fade-in-body">
+  <h1>
+    <span>Engkau</span>
+    <span>adalah</span>
+    <span>sekuntum</span>
+    <span>bunga</span>
+    <span>mawar</span>
+    <span>di tengah</span>
+    <span>hamparan</span>
+    <span>bunga</span>
+    <span>melati,</span>
+    <span>yang</span>
+    <span>seketika</span>
+    <span>menghentikan</span>
+    <span>langkahku</span>
+    <span>menuntunku</span>
+    <span>pada</span>
+    <span>keindahan</span>
+    <span>hatimu</span>
+    <span>🌹.</span>
+  </h1>
+
+  <script>
+    // Menambahkan class untuk mengubah warna latar belakang
+    setTimeout(() => {
+      document.body.classList.toggle('bg-change');
+      setTimeout(fade, 4000);
+    }, 4000); // Mengubah latar belakang setelah 4 detik
+
+    function fade() {
+      // Menetapkan event listener pada button
+
+      // Menerapkan efek fade-out pada seluruh body
+      document.body.classList.remove('fade-in-body');
+      document.body.classList.add('fade-out');
+
+      // Menunggu 1 detik sebelum mengarahkan ke link baru
+      setTimeout(() => {
+        window.location.href = './4.html'; // Ganti dengan URL yang diinginkan
+      }, 1000); // Durasi fade-out (1 detik)
+
+    }
+
+  </script>
+</body>
+
+</html>

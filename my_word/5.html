@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepedihan Perpisahan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700;700&family=Quicksand:wght@300&family=Qwitcher+Grypen:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        h1 {
+            opacity: 0;
+            font-size: 2.5em;
+            text-align: center;
+            transition: opacity 1s;
+            position: absolute;
+            /* Menggunakan posisi absolut agar teks berada di tempat yang sama */
+        }
+
+        .dancing-script {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight:600;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="dancing-script">
+    <h1 id="text"></h1>
+
+    <script>
+        // Array teks
+        const texts = [
+            "Menunggu adalah harapan yang tak pernah pudar...",
+            "Namun ketika yang dinanti pergi...",
+            "Segala harapan itu runtuh...",
+            "Rasa hampa menyelimuti hati...",
+            "Tertinggal dalam kesendirian yang menyakitkan...",
+            "😊"
+        ];
+
+        let currentTextIndex = 0; // Indeks teks saat ini
+        const textElement = document.getElementById('text');
+
+        // Fungsi untuk menampilkan teks
+        function showText() {
+            // Mengubah teks dan mengatur efek fade
+            textElement.textContent = texts[currentTextIndex];
+            textElement.style.opacity = 1;
+
+            // Mengatur waktu untuk menghilangkan teks
+            setTimeout(() => {
+                textElement.style.opacity = 0;
+            }, 3000); // Teks ditampilkan selama 3 detik
+
+            // Mengatur waktu untuk teks berikutnya
+            setTimeout(() => {
+                currentTextIndex++;
+                if (currentTextIndex < texts.length) {
+                    showText(); // Panggil lagi untuk teks berikutnya
+                }
+            }, 4000); // Teks hilang selama 1 detik dan kemudian panggil teks berikutnya
+        }
+
+        showText(); // Memulai proses
+    </script>
+</body>
+
+</html>
